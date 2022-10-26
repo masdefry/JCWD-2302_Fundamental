@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+    <script>
+        do{
+            var totalBelanja = 100000
+            var uangKembali = 0
+
+            alert(`Total Belanja = Rp.${totalBelanja.toLocaleString()}`)
+            var totalUang = Number(prompt(`Silahkan Masukan Uang Anda: `))
+            uangKembali = totalUang - totalBelanja
+
+            if(totalUang < totalBelanja){
+                alert('Uang Anda Kurang!')
+            }else{
+                alert(`Transaksi Sukses! Uang Kembalian Anda ${uangKembali.toLocaleString()}`)
+            }
+        }while(totalUang < totalBelanja)
+    </script>
+</html>
