@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    do{
+        var totalBelanja = 100000
+        alert(`Total Belanja = ${totalBelanja}`)
+        
+        // Validasi apabila user menginput selain angka
+        do{
+            var uangBelanja = prompt("Input Uang Belanja")
+        }while(isNaN(uangBelanja))
+        
+        let uangKembalian = uangBelanja - totalBelanja
+
+        if(uangBelanja < totalBelanja){
+            alert("Transaksi Harus Diulang")
+        }else{
+            alert(`Transaksi Sukses, Uang Kembali = ${uangKembalian}`)
+        }
+    }while(uangBelanja < totalBelanja)
+</script>
+</html>
