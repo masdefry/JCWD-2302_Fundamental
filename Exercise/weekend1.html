@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Function
+    function CheckInput(bebas){
+        if(bebas < 1 || bebas > products.length){
+            return false
+        }else{
+            return true
+        }
+    }
+    let products = ["Apel", "Jeruk", "Mangga"]
+    let price = [10000, 15000, 20000]
+    let stock = [10, 15, 20]
+
+    let print = ``
+    for(let i=0; i<products.length; i++){
+        print += `${i+1}. ${products[i]} || Rp.${price[i].toLocaleString()} || ${stock[i]} \n`
+    }
+
+    do{
+        var inputUser = prompt(`${print} \n Silahkan Masukan Nomor Product`) // 1
+
+        if(CheckInput(inputUser) === false){ // 1 ---> return true
+            alert("Product Tidak Ditemukan")
+        }else{
+            alert("Product Ditemukan")
+        }
+    }while(CheckInput(inputUser) === false)
+
+
+</script>
+</html>
