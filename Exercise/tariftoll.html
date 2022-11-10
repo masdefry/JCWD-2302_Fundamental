@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1. Define variable ---> [{id, kota, harga}]
+    let toll = [
+        { id: 1, kota: "Jkt", harga: 100000 },
+        { id: 2, kota: "Crbn", harga: 150000 },
+        { id: 3, kota: "Smg", harga: 200000 },
+        { id: 4, kota: "Jmbg", harga: 250000 },
+        { id: 5, kota: "Sby", harga: 300000 }
+    ]
+    // 2. Show data
+    let showData = ``
+    toll.forEach((value, index) => {
+        showData += `${value.id}. ${value.kota} = Rp.${value.harga.toLocaleString()} \n`
+    })
+
+    // 3. Prompt pintuMasuk, prompt pintuKeluar
+    let pintuMasuk = parseInt(prompt(`${showData} \n Silahkan Masukan Pintu Masuk:`))-1 // 1-1 = 0
+    let pintuKeluar = parseInt(prompt(`${showData} \n Silahkan Masukan Pintu Keluar`))-1 // 3-1 = 2
+
+    // 4. Nge-looping untuk menjumlahkan tarif yang dilewati
+    let total = 0 // 0+100.000 = 100.000 ---> 100.000+150.000 = 250.000
+    for(let i=pintuMasuk; i<=pintuKeluar; i++){ // i=0; i<=2; i++
+        total += toll[i].harga // i=0 ---> toll[0].harga = 100.000;;; i=1 ---> toll[1].harga = 150.000
+    }
+
+    // 5. Cetak struk
+    alert(`
+        Purwadhika Toll \n
+        ${toll[pintuMasuk].kota} = Rp.${toll[pintuMasuk].harga} \n
+        ${toll[pintuKeluar].kota} = Rp.${toll[pintuKeluar].harga} \n
+        Total = ${total}
+    `)
+</script>
+</html>
