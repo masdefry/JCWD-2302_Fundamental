@@ -1,0 +1,22 @@
+<script>
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    // .then((res) => {
+    //     let data = res.json()
+    // })
+    // .catch((err) => {
+    //     console.log("Catch")
+    //     console.log(err)
+    // })
+
+    let Get = async() => {
+        try {
+            let result = await fetch("https://jsonplaceholder.typicode.com/users")
+            let data = await result.json()
+            console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    Get()
+</script>
