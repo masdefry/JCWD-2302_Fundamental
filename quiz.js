@@ -1,13 +1,13 @@
 // 1. Perhatikan code berikut ini! Hasil dari console.log(angka) adalah
 /*
     let angka = 12
-    angka *= `2`
-    angka++
-    angka++
-    angka += '1'
+    angka *= `2` // 24
+    angka++ // 25
+    angka++ // 26
+    angka += '1' // '261'
     console.log(angka)
 */
-// a. "261"
+// x "261"
 // b. 261
 // c. 1241
 // d. "1241"
@@ -33,7 +33,7 @@
     console.log(typeof strNumber) // String
 */
 // a. 20 & Number
-// b. NaN & String
+// x NaN & String
 // c. Null & String
 // d. NaN & NaN
 
@@ -41,15 +41,15 @@
 
 // 3. Berikut ini penamaan variable yang tepat sesuai dengan aturan Javascript, yaitu?
 // a. let #myName
-// b. var $myName
-// c. const _myName
+// x var $myName
+// x const _myName
 // d. Semua jawaban salah
 
 
 
 // 4. Berikut ini yang merupakan tipe data primitive, kecuali?
 // a. String
-// b. Array
+// x Array
 // c. Number
 // d. Null
 
@@ -57,9 +57,9 @@
 
 // 5. Dibawah ini manakah variable yang menghasilkan value undefined 
 //    apabila variable  tersebut di akses terlebih dahulu sebelum didefine?
-// a. var
-// b. let
-// c. const
+// x var
+// b. let ---> Error Not defined
+// c. const ---> Error Not defined
 // d. Semua jawaban salah
 
 
@@ -67,16 +67,16 @@
 // 6. Perhatikan code berikut! Hasil dari console di bawah ini apabila di jalankan di terminal adalah?
 /*
     const name = "Budi"
-    console.log("Nama saya ${name}")
+    console.log("Nama saya ${name}") ---> Nama saya ${name}
 */
 // a. Nama saya Budi
 // b. Nama saya "Budi"
 // c. TypeError: Assignment to constant variable.
-// d. Semua jawaban salah
+// x Semua jawaban salah
 
 
 
-// 7. Berikut ini, manakah pernyataan yang paling tepat?
+// 7. Berikut ini, manakah pernyataan yang paling tepat? SALAH SEMUA
 // a. Variable yang dideclare menggunakan var, value nya tidak dapat diubah
 // b. Variable yang dideclare menggunkan const, valuenya dapat diubah
 // c. Variable yang dideclare menggunakan let, tidak memiliki aturan scope
@@ -86,7 +86,7 @@
 
 // 8. Berikut ini pernyataan yang tepat mengenai conditional statement adalah?
 // a. Untuk menjalankan program secara berulang-ulang
-// b. Untuk mengambil keputusan 
+// x Untuk mengambil keputusan 
 // c. Untuk menampilkan data yang telah di proses
 // d. Untuk menghentikan suatu baris code
 
@@ -101,7 +101,7 @@ console.log(result)
 */
 // a. 10
 // b. 100
-// c. true
+// x true
 // d. false
 
 
@@ -122,7 +122,7 @@ console.log(result)
 */
 // a. Looping do while dijalankan 1x dan looping while akan infinite loop
 // b. Looping do while akan infinite loop dan looping while akan dijalankan 1x
-// c. Looping do while akan infinite loop dan looping while tidak akan pernah jalan
+// x Looping do while akan infinite loop dan looping while tidak akan pernah jalan
 // d. Semua jawaban salah
 
 
@@ -131,7 +131,7 @@ console.log(result)
 // a. " "
 // b. 2020
 // c. []
-// d. -0
+// x -0
 
 
 
@@ -142,7 +142,7 @@ console.log(result)
     console.log(Number(platNomor))
 */
 // a. "B 1234 A" & 1234
-// b. "B 1234 A" & NaN
+// x "B 1234 A" & NaN
 // c. "BA" & 1234
 // d. Undefined & NaN
 
@@ -151,7 +151,7 @@ console.log(result)
 // 13. Berikut pernyataan yang tepat mengenai looping while dan do while yaitu?
 // a. While menjalankan action terlebih dahulu, dilanjutkan dengan memeriksa kondisi 
 // b. While akan menjakankan action apabila kondisinya tidak terpenuhi
-// c. Do While menjalankan action terlebih dahulu, dilanjutkan dengan memeriksa kondisi
+// x Do While menjalankan action terlebih dahulu, dilanjutkan dengan memeriksa kondisi
 // d. Do While tidak membutuhkan sebuah kondisi untuk menjalankan action nya
 
 
@@ -174,7 +174,7 @@ console.log(result)
     }
     console.log(result) // Kita mencoba mengakses di outside scope nya
 */
-// a. ReferenceError: result is not defined
+// x ReferenceError: result is not defined
 // b. ReferenceError: Assignment to constant variables
 // c. SyntaxError: Identifier 'result' has already been declared
 // d. Undefined
@@ -182,10 +182,10 @@ console.log(result)
 
 
 // 15. Manakah code dibawah ini yang menghasilkan data bertipe Boolean yang bernilai true?
-// a. console.log(1 == '1')
+// x console.log(1 == '1')
 // b. console.log(null === undefined)
 // c. console.log(10 === '10')
-// d. console.log(String(20) === "20")
+// x console.log(String(20) === "20")
 
 
 
@@ -199,7 +199,7 @@ console.log(result)
         printLn = "Hai, Dunia!"
     }
 */
-// a. "Hello, World!"
+// x "Hello, World!"
 // b. ", World!"
 // c. "Hai, Dunia"
 // d. Semua jawaban salah
@@ -207,7 +207,7 @@ console.log(result)
 
 
 // 17. Berikut ini yang merupakan comparison operator, kecuali?
-// a. =>
+// x => ---> >=
 // b. <=
 // c. ==
 // d. ===
@@ -217,7 +217,7 @@ console.log(result)
 // 18. Berikut ini yang merupakan tipe data yang bersifat imutable, kecuali?
 // a. String
 // b. Number
-// c. Array
+// x Array
 // d. NaN
 
 
@@ -234,7 +234,7 @@ console.log(result)
 */
 // a. Purwadhika BSD
 // b. Purwadhika JKT
-// c. Error (Identifier 'campus' has already been declared)
+// x Error (Identifier 'campus' has already been declared)
 // d. Error (Assignment to constant variable)
 
 
@@ -245,16 +245,18 @@ console.log(result)
 
     if(nilaiModul > 50){
         console.log("Anda Remedial")
-    }if(nilaiModul > 60){
+    }
+    if(nilaiModul > 60){
         console.log("Anda Hampir Tidak Remedial")
-    }if(nilaiModul >= 70){
+    }
+    if(nilaiModul >= 70){
         console.log("Anda Lulus")
     }
 */
 // a. Anda Remidial
 // b. Anda Hampir Tidak Remidial
 // c. Anda Lulus
-// d. Semua jawaban salah
+// x Semua jawaban salah
 
 let nilaiModul = 70
 
