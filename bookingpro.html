@@ -1,0 +1,41 @@
+<script>
+    let travels = [
+        { name: "Daytrans", price: 85000, seat: ['[Driver]', '\n', '[1A]', '[1B]', '   ', '[2A]', '[2B] \n', '[3A]', '[3B]', '   ', '[4A]', '[4B] \n', '[5A]', '[5B]', '   ', '[6A]', '[6B] \n', '[7A]', '[7B]', '   ', '[8A]', '[8B]'] },
+        { name: "Baraya Trans", price: 70000, seat: ['[Driver]', '\n', '[1A]', '[1B]', '   ', '[2A]', '[2B] \n', '[3A]', '[3B]', '   ', '[4A]', '[4B] \n', '[5A]', '[5B]', '   ', '[6A]', '[6B] \n', '[7A]', '[7B]', '   ', '[8A]', '[8B]'] },
+        { name: "Holiday", price: 90000, seat: ['[Driver]', '\n', '[1A]', '[1B]', '   ', '[2A]', '[2B] \n', '[3A]', '[3B]', '   ', '[4A]', '[4B] \n', '[5A]', '[5B]', '   ', '[6A]', '[6B] \n', '[7A]', '[7B]', '   ', '[8A]', '[8B]'] }
+    ]
+
+    let carts = []
+
+    let showTravels = ''
+    travels.forEach((value, index) => {
+        showTravels += `${index+1}. ${value.name} - Price: Rp.${value.price.toLocaleString()} \n`
+    })
+    let selected = parseInt(prompt(`${showTravels} \n Silahkan Pilih Travel:`)) - 1
+
+    function ShowSeat(){
+        let showSeat = ''
+        for(let i=0; i < travels[selected].seat.length; i++){
+            showSeat += `${travels[selected].seat[i]}`
+        }
+
+        return showSeat
+    }
+    
+    do{
+        do{
+            let selectedSeat = '[' + prompt(`${ShowSeat()} \n Silahkan Pilih Nomor Seat:`) + ']'
+            var seatAvailable = travels[selected].seat.includes(selectedSeat)
+
+            if(seatAvailable === false){
+                alert("Kursi Tidak Tersedia")
+            }else{
+                let idxOf = travels[selected].seat.indexOf(selectedSeat)
+                travels[selected].seat[idxOf] = '[SO]'
+            }
+        }while(seatAvailable === false)
+
+    var showMenu = parseInt(prompt(`Silahkan Pilih Menu: \n 1. Checkout \n 2. Select Seat`))
+    }while(showMenu === 2)
+    
+</script>
